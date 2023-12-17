@@ -53,7 +53,7 @@ def query_item_by_parameters(
     category: Category | None = None,
 ) -> dict[str, Selection | list[Item]]:
     def check_item(item: Item):
-        """Check if the item matches the query arguments from the outer scope."""
+ 
         return all(
             (
                 name is None or item.name == name,
