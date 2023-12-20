@@ -91,7 +91,7 @@ def add_item(item: Item) -> dict[str, Item]:
     return {"added": item}
 
 
-# The 'responses' keyword allows you to specify which responses a user can expect from this endpoint.
+# La parola chiave 'responses' consente di specificare quali risposte un utente può attendersi da questo punto di accesso
 @app.put(
     "/update/{item_id}",
     responses={
@@ -99,7 +99,7 @@ def add_item(item: Item) -> dict[str, Item]:
         400: {"description": "No arguments specified"},
     },
 )
-# The Query and Path classes also allow us to add documentation to query and path parameters.
+# Le classi Query e Path ci permettono anche di aggiungere documentazione ai parametri di query e di percorso.
 def update(
     item_id: int = Path(
         title="Item ID", description="Unique integer that specifies an item.", ge=0
